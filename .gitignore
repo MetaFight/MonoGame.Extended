@@ -8,4 +8,4 @@
 
 # macOS
 .DS_Store
-*.user
+/.vs

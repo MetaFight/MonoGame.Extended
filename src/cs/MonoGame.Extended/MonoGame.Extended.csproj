@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>NET6</TargetFramework>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -18,13 +18,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303">
-      <PrivateAssets>All</PrivateAssets>
+    <PackageReference Include="DotNet.ReproducibleBuilds" Version="1.1.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="MonoGame.Framework.Content.Pipeline" Version="3.8.1.303">
-      <PrivateAssets>All</PrivateAssets>
+    <PackageReference Include="DotNet.ReproducibleBuilds.Isolated" Version="1.1.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\kni\src\Xna.Framework.Content.Pipeline.Graphics\XNA.Framework.Content.Pipeline.Graphics.csproj" />
+    <ProjectReference Include="..\..\..\..\kni\src\Xna.Framework\Xna.Framework.csproj" />
   </ItemGroup>
   
 </Project>

@@ -14,5 +14,6 @@ namespace MonoGame.Extended.Sprites
         Color Color { get; }
         Vector2 Origin { get; }
         SpriteEffects Effect { get; }
+        float LayerDepth { get; }
     }
 }

@@ -146,9 +146,9 @@ namespace MonoGame.Extended.Tiled.Renderers
 			}
 			else
 			{
-				_worldMatrix.Translation = new Vector3(offset, depth);
+                _worldMatrix.Translation = new Vector3(offset, depth);
 
-				var effect1 = effect ?? _defaultEffect;
+                var effect1 = effect ?? _defaultEffect;
 				var tiledMapEffect = effect1 as ITiledMapEffect;
 				if (tiledMapEffect == null)
 					return;
@@ -170,16 +170,16 @@ namespace MonoGame.Extended.Tiled.Renderers
 					_graphicsDevice.SetVertexBuffer(layerModel.VertexBuffer);
 					_graphicsDevice.Indices = layerModel.IndexBuffer;
 
-					// for each pass in our effect
-					foreach (var pass in effect1.CurrentTechnique.Passes)
-					{
-						// apply the pass, effectively choosing which vertex shader and fragment (pixel) shader to use
-						pass.Apply();
+                    // for each pass in our effect
+                    foreach (var pass in effect1.CurrentTechnique.Passes)
+                    {
+                        // apply the pass, effectively choosing which vertex shader and fragment (pixel) shader to use
+                        pass.Apply();
 
-						// draw the geometry from the vertex buffer / index buffer
-						_graphicsDevice.DrawIndexedPrimitives(PrimitiveType.TriangleList, 0, 0, layerModel.TriangleCount);
-					}
-				}
+                        // draw the geometry from the vertex buffer / index buffer
+                        _graphicsDevice.DrawIndexedPrimitives(PrimitiveType.TriangleList, 0, 0, layerModel.TriangleCount);
+                    }
+                }
 			}
         }
 
